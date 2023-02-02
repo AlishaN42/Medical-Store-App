@@ -1,0 +1,21 @@
+﻿@page "/"
+@using Volo.Abp.MultiTenancy
+@inherits MedicalComponentBase
+@inject AuthenticationStateProvider AuthenticationStateProvider
+<div class="container">
+    <div class="p-5 text-center">
+        <Badge Color="Color.Success" class="mb-4">
+            <h4 class="m-1"> <i class="fa fa-heartbeat"></i> Welcome to <strong>Naturo Medical</strong> Application!</h4>
+        </Badge>
+
+        <h1>All Kinds of medicines Available</h1>
+
+        
+
+        @if (!CurrentUser.IsAuthenticated)
+        {
+            <a class="btn btn-primary" href="Account/Login"><i class="fa fa-sign-in"></i> @L["Login"]</a>
+        }
+    </div>
+
+ </div>
